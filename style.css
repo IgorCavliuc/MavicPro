@@ -91,6 +91,9 @@ body{
     right: 0;
     top: 0;    
     z-index: 10;
+    
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .header_inner{
@@ -101,7 +104,6 @@ body{
     text-transform: uppercase;
     line-height: 17px;
     font-size: 15px;
-    margin-top: 15px;
 }
 .header_btn{
     color: #fff;
@@ -456,10 +458,12 @@ transform: rotate(180deg);
 
 .contacts_inner{
     display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 25px;
 }
 .contacts_info{
     width: 240px;
-    margin-right: 60px;
 }
 .contacts_info-box{
     margin-bottom: 30px;
@@ -602,7 +606,7 @@ transform: rotate(180deg);
         width: 80%;
     }
     .top_inner{
-        padding-bottom: 85px;
+        padding-bottom: 40px;
     }
     .products_slider-text{
         left: auto;
@@ -616,6 +620,39 @@ transform: rotate(180deg);
     .products_slider-box{
         padding: 0 20px;
     }
+    .center{
+        
+        text-align: center;
+    }
+    .specification_item img{
+        
+        width: 80%;
+    }
+    .box-1::before,
+    .box-2::before,
+    .box-3::before,
+    .box-4::before{
+        display: none;
+    }
+    .questions_item-title:first-child{
+        padding-top: 20px;
+    }
+    .questions_item-title {
+        line-height: 20px;
+        font-size: 17px;
+        padding: 20px 6px 27px 40px;
+        position: relative;
+        cursor: pointer;
+    }
+    
+    .questions_item-text{
+        padding-bottom: 17px;
+    }
+    .benefits_item{
+        margin-bottom: 75px;
+    }
+   
+    
 }
 
 @media (max-width: 1280px){
@@ -632,6 +669,8 @@ transform: rotate(180deg);
     .benefits_item-3::before{
         width: 35%;
     }    
+    
+}
 
 
 @media (max-width: 1100px){
@@ -639,7 +678,7 @@ transform: rotate(180deg);
         order: 1;
     }
     .title{
-        padding-top: 100px;
+        padding-top: 50px;
     }
     .menu_list{
         position: fixed;
@@ -742,6 +781,19 @@ transform: rotate(180deg);
     .benefits_items{
         display: block;
     }
+    .benefits_item{
+        width: 100%;
+        margin-bottom: 40px;
+    
+    }
+    .benefits_item:nth-child(even) {
+        margin-left: 200px;
+        transform: translateY(0);
+    }
+    .benefits_info{
+        width: 35%;
+    }
+    
     
 }
 
@@ -755,6 +807,10 @@ transform: rotate(180deg);
         font-size: 20px;
         line-height: 22px;
         top: -85px;
+    }
+    .box-4,
+    .box-2{
+        margin-top: 50px;
     }
    
 }
@@ -788,8 +844,57 @@ transform: rotate(180deg);
         height: 100%;
         
     }
+    .specification_item{
+        display: flex;
+    }
+    .specification_item img{
+        margin: 0 auto;
+    }
+    .specification_inner{
+        display: block;
+        
+    }
+    .specification_box{
+        width: 50%;
+        margin-top: 20px;
+        padding: 0 10px;
+    }
+
+    .contacts_inner{
+        display: block;
+    }
+    .contacts_form{
+        width: 100%;
+    }
+    .contacts_social-list{
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 20px 0;
+
+    }
   
    
+}
+@media (max-width: 780px){
+    .benefits_item:nth-child(even) {
+        margin-left:0;
+    }
+    .benefits_items{
+        padding-left: 25px;
+    }
+    .benefits_info{
+        width: 50%;
+    }
+    .questions_items{
+        padding-right: 70px;
+    }
+    .questions_items::before{
+        display: none;
+    }
+    .questions_item-text,
+    .questions_item-title{
+        padding-left: 20px;
+    }
 }
 @media (max-width: 680px){
     .title{
@@ -816,7 +921,48 @@ transform: rotate(180deg);
     .products_text{
         font-size: 13px;
     }
+    .benefits_num{
+        display: none;
+    }
     
+    .benefits_item{
+        display: block;
+        margin-bottom: 10px;
+    }
+    .benefits_info{
+        padding: 10px 0;
+    }
+    .benefits_img img{
+        margin-left: auto;
+        display: block;
+
+    }
+    .benefits_info-text{
+        font-size: 13px;
+    }
+    .specification_item{
+        display: block;
+    }
+    .specification_box{
+        width: 100%;
+    }
+    .specification_box-title{
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    .specification_box-text{
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 400px){
+    .contacts_form-line{
+        display: block;
+    }
+    .contacts_form-input{
+        width: 100%;
+        margin: 12px auto;
+    }
 }
 
 
