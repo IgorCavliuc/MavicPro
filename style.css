@@ -73,7 +73,7 @@ body{
     line-height: 53px;
     padding-left: 25px;
     margin-bottom: 55px;
-    padding-top: 100px;
+    padding-top: 90px;
 }
 
 .scroll_btn{
@@ -221,7 +221,7 @@ padding: 0 20px;
     position: absolute;
     width: 560px;
     height: 276px;
-    border: 4px solid #fff;
+    border: 2px solid #fff;
     top: -12px;
     right: -12px;
     z-index: -1;
@@ -587,7 +587,12 @@ transform: rotate(180deg);
     body{
         font-size: 16px;
         line-height: 22px;
+        height: 100vh;
     }
+    .title{
+        padding-top: 30px;
+    }
+    
     .top_title{
         font-size: 75px;
         line-height: 90px;
@@ -596,18 +601,49 @@ transform: rotate(180deg);
     .top_inner img{
         width: 80%;
     }
+    .top_inner{
+        padding-bottom: 85px;
+    }
+    .products_slider-text{
+        left: auto;
+        top: -100px;
+        right: 0;
+    }
+    
     .top_text{
         margin: 15px 0 25px;
     }
+    .products_slider-box{
+        padding: 0 20px;
+    }
 }
+
+@media (max-width: 1280px){
+    .benefits_item{
+        width: 45%;
+    }
+    .benefits_item-1::before{
+        width: 40%;
+
+    }
+    .benefits_item-3::after{
+        width: 80%;
+    }
+    .benefits_item-3::before{
+        width: 35%;
+    }    
+
 
 @media (max-width: 1100px){
     .menu{
         order: 1;
     }
+    .title{
+        padding-top: 100px;
+    }
     .menu_list{
         position: fixed;
-        font-size: 24px;
+        font-size: 17px;
         font-weight: 500;
         top: 0;
         left: 0;
@@ -620,16 +656,21 @@ transform: rotate(180deg);
         flex-direction: column;
         justify-content: space-around;
         padding-top: 90px;
-        transform: translateY(-100%);
-        transition: transform .5s;
+        transform: translateY(-1000%);
+        transition: transform .3s;
+        padding: 90px 0 0 35px;
+        overflow: auto;
 
     }
     .menu_list-item{
-        margin-left: 35px;
+        margin-bottom: 35px;
     }
     .menu_list-item+.menu_list-item{
         padding-left: 0;
         /* margin-bottom:65px; */
+    }
+    .menu_list-item:first-child{
+        margin-top: auto;
     }
     .active{
         transform: translateY(0);
@@ -670,8 +711,95 @@ transform: rotate(180deg);
     .header_phone{
         display: none;
     }
+    
+    .menu_list-phone,
+    .menu_list-link{
+        display: block;
+        
+    }
+    .menu_list-phone{
+        font-size: 18px;
+        position: relative;
+        padding-top: 30px;
+        font-weight: bold;
+        margin-bottom: auto;
+        margin-top: auto;
+
+    }
+    .menu_list-phone::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -40px;
+        right: 0;
+        border-top: 1px solid #363636;
+    }
+    .benefits_item-1::before,
+    .benefits_item-3::after,
+    .benefits_item-3::before{
+        display: none;
+    }
+    .benefits_items{
+        display: block;
+    }
+    
 }
 
+@media (max-width: 1024px){
+    .title{
+        font-size: 35px;
+        line-height: 42px;
+        margin-bottom: 35px;
+    }
+    .products_slider-text{
+        font-size: 20px;
+        line-height: 22px;
+        top: -85px;
+    }
+   
+}
+@media (max-width: 940px){
+    .product_inner{
+        display: block;
+    }
+    .products_text{
+        padding-right: 0;
+        max-width: 100%;
+        margin-bottom: 100px;
+    }
+    .products_slider{
+        margin-left: auto;
+        margin-bottom: 25px;
+    }
+    .title{
+        padding-top: 0;
+    }
+    .products_text p{
+        margin-bottom: 10px;
+    }
+    .products_slider{
+        max-width: 80%;
+    }
+    .products_slider img{
+        width: 100%;
+    }
+    .products_slider::before{
+        width: 100%;
+        height: 100%;
+        
+    }
+  
+   
+}
+@media (max-width: 680px){
+    .title{
+        padding-left: 0;
+        padding-top: 40px;
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 15px;
+    }
+}
 @media (max-width: 540px){
     .top_title{
         font-size: 45px;
@@ -684,5 +812,33 @@ transform: rotate(180deg);
     }
     .top_inner{
     padding-bottom: 0;
+    }
+    .products_text{
+        font-size: 13px;
+    }
+    
+}
+
+
+
+
+
+
+
+
+@media (max-height: 400px){
+    .menu_list-phone{
+        padding: 15px;
+    }
+    .menu_list-item{
+        margin-bottom: 25px;
+    }
+}
+@media (max-height: 340px){
+    .menu_list-item{
+        margin-bottom: 15px;
+    }
+    .menu_list-phone{
+        padding: 5px 0;
     }
 }
